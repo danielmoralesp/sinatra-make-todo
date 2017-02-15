@@ -12,23 +12,8 @@ post '/' do
   redirect '/'
 end
 
-#get '/:id' do
-#  @note = Tarea.update(params[:id])
-#  @title = "Editar Tarea ##{params[:id]}"
-#  erb :edit
-#end
-
-#put '/:id' do
-#  @note = Tarea.update(params[:id])
-#  n.title = params[:title]
-#  n.done = params[:done] ? true : false
-#  n.updated_at = Time.now
-#  redirect '/'
-#end
-
 get '/:id/complete' do
   n = Tarea.update(params[:id])
-#  n['done'] = n['done'] ? false : true # flip it
   redirect '/'
 end
 
@@ -40,6 +25,5 @@ end
 
 delete '/:id' do
   n = Tarea.destroy(params[:id])
-#  n.destroy
   redirect '/'
 end

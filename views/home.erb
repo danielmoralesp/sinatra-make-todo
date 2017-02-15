@@ -9,7 +9,6 @@
   <article <%= 'class="complete"' if note['done'] ? true : false %>>
     <p>
       <%= note['title'] %>
-      <!--<span><a href="/<%= note['id'] %>">[edit]</a></span>-->
       <span><a href="/<%= note['id'] %>/delete">[delete]</a></span>
     </p>
     <p class="links">

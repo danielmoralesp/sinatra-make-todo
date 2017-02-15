@@ -1,9 +1,8 @@
 <% if @note %>
-  <p>Esta usted seguro que desea eliminar esta Tarea:<em>"<%= @note['title'] %>"</em>?</p>
+  <p>Esta usted seguro que desea eliminar esta Tarea?</p>
   <form action="/<%= @note['id'] %>" method="post">
     <input type="hidden" name="_method" value="delete">
     <input type="submit" value="Si, Eliminar!">
-    <!--<a href="/<%= @note['id'] %>">Cancelar</a>-->
   </form>
 <% else %>
   <p>Note not found.</p>
