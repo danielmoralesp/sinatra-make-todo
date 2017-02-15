@@ -1,0 +1,20 @@
+<section id="add">
+  <form action="/" method="post">
+    <textarea name="title" placeholder="Your note&hellip;"></textarea>
+    <input type="submit" value="Ingresar Tarea!">
+  </form>
+</section>
+
+<% @notes.each do |note| %>
+  <article <%= 'class="complete"' if note['done'] ? true : false %>>
+    <p>
+      <%= note['title'] %>
+      <!--<span><a href="/<%= note['id'] %>">[edit]</a></span>-->
+      <span><a href="/<%= note['id'] %>/delete">[delete]</a></span>
+    </p>
+    <p class="links">
+      <a href="/<%= note['id'] %>/complete">&#8623;</a>
+    </p>
+    <p class="meta">Created: <%= note['created_at'] %></p>
+  </article>
+<% end %>
